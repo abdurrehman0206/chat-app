@@ -1,0 +1,66 @@
+@keyframes rotateCW {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateCCW {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+$primary-color: #0b0b0d;
+$secondary-color: #474a56;
+$tertiary-color: #929aab;
+$quaternary-color: #d3d5fd;
+.loader--primary {
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  &::after {
+    content: "";
+    background-color: $secondary-color;
+    height: 62px;
+    width: 20px;
+    animation: rotateCW 1s linear infinite;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $secondary-color;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+}
+.loader--secondary {
+  z-index: 3;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: black;
+  &::after {
+    content: "";
+    background-color: $secondary-color;
+    width: 43px;
+    height: 20px;
+    animation: rotateCCW 1s linear infinite;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $secondary-color;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+  }
+}

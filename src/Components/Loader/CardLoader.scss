@@ -1,0 +1,53 @@
+$bt: 1px solid magenta;
+$primary-color: #0b0b0d;
+$secondary-color: #474a56;
+$tertiary-color: #929aab;
+$quaternary-color: #d3d5fd;
+@keyframes gradient {
+  0% {
+    background: linear-gradient(30deg, $tertiary-color, $secondary-color);
+  }
+  50% {
+    background: linear-gradient(30deg, $secondary-color, $tertiary-color);
+  }
+  100% {
+    background: linear-gradient(30deg, $tertiary-color, $secondary-color);
+  }
+}
+.user--card--skeleton {
+  margin: 1rem 0;
+  position: relative;
+  justify-content: flex-start;
+  .img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(30deg, $tertiary-color, $secondary-color);
+    animation: 1s gradient infinite;
+  }
+  .user--info {
+    div {
+      margin: 3px 5px;
+      height: 10px;
+      border-radius: 5px;
+      background-position: 0 0;
+      background: linear-gradient(30deg, $tertiary-color, $secondary-color);
+      animation: 1s gradient infinite;
+      transition: all 1s ease-in-out;
+    }
+    .div1 {
+      width: 100px;
+    }
+    .div2 {
+      width: 150px;
+    }
+  }
+  button {
+    position: absolute;
+    right: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: $quaternary-color;
+    background-color: transparent;
+  }
+}

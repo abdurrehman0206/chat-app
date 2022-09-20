@@ -1,0 +1,59 @@
+@-webkit-keyframes gradient {
+  0% {
+    background: linear-gradient(30deg, #929aab, #474a56);
+  }
+  50% {
+    background: linear-gradient(30deg, #474a56, #929aab);
+  }
+  100% {
+    background: linear-gradient(30deg, #929aab, #474a56);
+  }
+}
+@keyframes gradient {
+  0% {
+    background: linear-gradient(30deg, #929aab, #474a56);
+  }
+  50% {
+    background: linear-gradient(30deg, #474a56, #929aab);
+  }
+  100% {
+    background: linear-gradient(30deg, #929aab, #474a56);
+  }
+}
+.user--card--skeleton {
+  margin: 1rem 0;
+  position: relative;
+  justify-content: flex-start;
+}
+.user--card--skeleton .img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(30deg, #929aab, #474a56);
+  -webkit-animation: 1s gradient infinite;
+          animation: 1s gradient infinite;
+}
+.user--card--skeleton .user--info div {
+  margin: 3px 5px;
+  height: 10px;
+  border-radius: 5px;
+  background-position: 0 0;
+  background: linear-gradient(30deg, #929aab, #474a56);
+  -webkit-animation: 1s gradient infinite;
+          animation: 1s gradient infinite;
+  transition: all 1s ease-in-out;
+}
+.user--card--skeleton .user--info .div1 {
+  width: 100px;
+}
+.user--card--skeleton .user--info .div2 {
+  width: 150px;
+}
+.user--card--skeleton button {
+  position: absolute;
+  right: 5px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #d3d5fd;
+  background-color: transparent;
+}/*# sourceMappingURL=CardLoader.css.map */
